@@ -5,9 +5,9 @@ import AppContext from "./context/cardDeckContext.jsx";
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+ // <React.StrictMode>
     <AppContext>
       <App />
     </AppContext>
-  </React.StrictMode>
+ // </React.StrictMode>
 );

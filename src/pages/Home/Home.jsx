@@ -1,13 +1,24 @@
-import React from 'react'
-import { useGlobalContext } from '../../context/cardDeckContext'
+import { useGlobalContext } from "../../context/cardDeckContext";
+import ShuffleCards from "../../hooks/ShuffleCards";
 const Home = () => {
-  const {name} = useGlobalContext()
+  const { shuffledCards, setShuffledCards, cardsIcons } = useGlobalContext();
+  const newGame = () => {
+    ShuffleCards(cardsIcons, setShuffledCards);
+  };
+  // console.log(cardsIcons);
+  console.log(shuffledCards);
   return (
-  <>
-    <h1>Home</h1>
-    <p>{name}</p>
-  </>
-  )
-}
+    <>
+      <h1>Home</h1>
+      <button
+        onClick={() => {
+          newGame();
+        }}
+      >
+        New Game
+      </button>
+    </>
+  );
+};
 
-export default Home
+export default Home;
