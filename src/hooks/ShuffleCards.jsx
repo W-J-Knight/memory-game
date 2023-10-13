@@ -1,9 +1,9 @@
-const ShuffleCards = (cardsIcons, setValue) => {
+const ShuffleCards = (cardsFrontIcons, setValue, back) => {
   setValue(
     (preValue) =>
-      (preValue = [...cardsIcons, ...cardsIcons]
+      (preValue = [...cardsFrontIcons, ...cardsFrontIcons]
         .sort(() => Math.random() - 0.5)
-        .map((card, index) => ({ ...card, id: index + 1})))
+        .map((card, index) => ({ ...card, id: index + 1, ...back })))
   );
 };
 

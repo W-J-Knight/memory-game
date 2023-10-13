@@ -1,0 +1,10 @@
+.table {
+    margin-top: .8rem;
+    width:100%;
+    display: flex;
+    /* justify-content: center; */
+    /* height: 80vh; */
+    flex-wrap: wrap;
+        justify-content: space-around;
+    background-color: #fff;
+}

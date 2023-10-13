@@ -70,8 +70,8 @@ h6 {
 main{
   color: darkgrey;
   background-color: rgb(52, 52, 70);
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   justify-content: center;
-  padding-top: 3rem;
+  padding: .5rem;
 }
