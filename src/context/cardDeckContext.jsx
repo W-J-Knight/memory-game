@@ -3,8 +3,6 @@ import { BsMoonStarsFill } from "react-icons/bs";
 import { WiStars } from "react-icons/wi";
 import {
   GiGhost,
-  GiFloatingGhost,
-  GiAlienSkull,
   GiCandleSkull,
   GiWitchFace,
   GiWerewolf,
@@ -35,12 +33,13 @@ const AppContext = ({ children }) => {
     { Back: GiStarSwirl},
     { Back: GiStarSattelites},
   ]
-
+ const back = cardsBackIcons[Math.floor(Math.random() * cardsBackIcons.length)];
   const value = {
     cardsFrontIcons,
     shuffledCards,
     setShuffledCards,
     cardsBackIcons,
+    back,
   };
   return (
     <GlobalContext.Provider value={value}>{children}</GlobalContext.Provider>

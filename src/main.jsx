@@ -4,10 +4,11 @@ import App from "./App.jsx";
 import AppContext from "./context/cardDeckContext.jsx";
 
 
+
 ReactDOM.createRoot(document.getElementById("root")).render(
- // <React.StrictMode>
-    <AppContext>
+  // <React.StrictMode>
+  <AppContext>
       <App />
-    </AppContext>
- // </React.StrictMode>
+  </AppContext>
+  // </React.StrictMode>
 );

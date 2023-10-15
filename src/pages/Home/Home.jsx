@@ -1,16 +1,16 @@
+import { useState } from "react";
 import CardDeck from "../../components/cardDeck/CardDeck";
 import { useGlobalContext } from "../../context/cardDeckContext";
 import ShuffleCards from "../../hooks/ShuffleCards";
 import styles from "./Home.module.css";
+import LogicContext from "../../context/gameLogicContext";
 const Home = () => {
-  const { shuffledCards, setShuffledCards, cardsFrontIcons, cardsBackIcons } =
+  const {setShuffledCards, cardsFrontIcons, back } =
     useGlobalContext();
-    const back =
-      cardsBackIcons[Math.floor(Math.random() * cardsBackIcons.length)];
+ 
   const newGame = () => {
     ShuffleCards(cardsFrontIcons, setShuffledCards, back);
   };
-  console.log(shuffledCards);
 
   return (
     <section>
@@ -22,7 +22,9 @@ const Home = () => {
       >
         New Game
       </button>
-      <CardDeck />
+      <LogicContext>
+        <CardDeck />
+      </LogicContext>
     </section>
   );
 };
