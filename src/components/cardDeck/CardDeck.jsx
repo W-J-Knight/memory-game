@@ -3,25 +3,17 @@ import { useGlobalContext } from "../../context/cardDeckContext";
 import Card from "../card/Card";
 import useCompare from "../../hooks/useCompare";
 
-
 const CardDeck = () => {
+  const { shuffledCards } = useGlobalContext();
 
-  const { shuffledCards} = useGlobalContext();
- 
- 
- useCompare()
+  useCompare();
+  console.log(shuffledCards);
   return (
     <>
       {shuffledCards && (
         <div className={style.table}>
           {shuffledCards.map((card) => {
-            return (
-              <Card
-                key={card.id}
-                {...card}
-                card={card}
-              />
-            );
+            return <Card key={card.id} {...card} card={card} />;
           })}
         </div>
       )}
