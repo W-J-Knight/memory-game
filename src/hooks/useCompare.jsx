@@ -1,11 +1,16 @@
 import { useEffect } from "react";
 import { useGameContext } from "../context/gameLogicContext";
-import { useGlobalContext } from "../context/cardDeckContext";
+
 
 const useCompare = () => {
-  const { setChoiceOne, setChoiceTwo, setTurn, choiceOne, choiceTwo } =
-    useGameContext();
-  const { setShuffledCards, shuffledCards } = useGlobalContext;
+  const {
+    setChoiceOne,
+    setChoiceTwo,
+    setTurn,
+    choiceOne,
+    choiceTwo,
+    setDisabled,
+  } = useGameContext();
   // compare 2 selected cards
   useEffect(() => {
     if (choiceOne && choiceTwo) {
@@ -14,7 +19,7 @@ const useCompare = () => {
         choiceTwo.matched = true;
         resetTurn();
       } else {
-        resetTurn();
+        setTimeout(() => resetTurn(), 2000);
       }
     }
   }, [choiceOne, choiceTwo]);
@@ -23,6 +28,7 @@ const useCompare = () => {
     setChoiceOne(null);
     setChoiceTwo(null);
     setTurn((preValue) => preValue + 1);
+    setDisabled(false);
   };
 };
 

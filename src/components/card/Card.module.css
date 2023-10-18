@@ -1,25 +1,52 @@
 .card {
-    border: red solid 2px;
+    border: rgb(129, 205, 75) solid 2px;
     position: relative;
     width: 15%;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    /* justify-content: center;
+    flex-direction: column; */
     margin-bottom: .25rem;
 }
-
 .front, .back{
     width: 100%;
     display: flex;
     justify-content: center;
 }
+.card .front{
+    /* border: red solid 2px; */
+    transform: rotateY(90deg);
+    transition: all ease-in 0.2s;
+    position: absolute;
+}
+.flipped .front{
+    /* border: rgb(40, 7, 132) solid 2px; */
+    transform: rotateY(0deg);
+    transition-delay: 0s;
+    background: #000;
+}
+.card .back {
+    /* border: red solid 2px; */
+    /* transform: rotateY(90deg); */
+    /* position: absolute;
+     */
+     transition: all ease-in 0.2s;
+     transition-delay: 0.2s;
+}
 
-.icon {
+.flipped .back {
+    /* border: rgb(40, 7, 132) solid 2px; */
+    transform: rotateY(90deg);
+    transition-delay: 0s;
+}
+.front .icon {
     color: chartreuse;
     font-size: 8rem;
     width: 50%;
 }
-.back .icon {
+.back{
+    background-color: chocolate;
+}
+.back .icon{
     color: rgb(78, 41, 13);
     font-size: 8rem;
     width: 50%;
