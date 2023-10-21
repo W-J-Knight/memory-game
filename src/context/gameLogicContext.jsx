@@ -17,7 +17,6 @@ const LogicContext = ({ children }) => {
     setChoiceTwo,
     turn,
     setTurn,
-
     setDisabled,
   };
   return <GameContext.Provider value={value}>{children}</GameContext.Provider>;
