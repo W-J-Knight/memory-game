@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
+import style from './About.module.css'
 
 const About = () => {
   return (
     <section>
-      <h1>About</h1>
+      <h1 className={style.title}>About</h1>
       <p>
-        I find memmory game on
-        <Link to="https://youtu.be/ZCKohZwGZMw?si=j6dxH10UlctedlVX">
+        I found a memmory game on
+        <Link to="https://youtu.be/ZCKohZwGZMw?si=j6dxH10UlctedlVX" className={style.youtube} target='_blank'>
           YouTube
         </Link>
         .

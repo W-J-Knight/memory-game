@@ -9,14 +9,14 @@ const LogicContext = ({ children }) => {
   const [choiceOne, setChoiceOne] = useState(null);
   const [choiceTwo, setChoiceTwo] = useState(null);
   const [disabled, setDisabled] = useState(false);
-  const [turn, setTurn] = useState(0);
+  const [turns, setTurns] = useState(0);
   const value = {
     choiceOne,
     setChoiceOne,
     choiceTwo,
     setChoiceTwo,
-    turn,
-    setTurn,
+    turns,
+    setTurns,
     setDisabled,
   };
   return <GameContext.Provider value={value}>{children}</GameContext.Provider>;

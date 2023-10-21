@@ -6,7 +6,7 @@ const useCompare = () => {
   const {
     setChoiceOne,
     setChoiceTwo,
-    setTurn,
+    setTurns,
     choiceOne,
     choiceTwo,
     setDisabled,
@@ -27,7 +27,7 @@ const useCompare = () => {
   const resetTurn = () => {
     setChoiceOne(null);
     setChoiceTwo(null);
-    setTurn((preValue) => preValue + 1);
+    setTurns((preValue) => preValue + 1);
     setDisabled(false);
   };
 };

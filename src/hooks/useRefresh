@@ -1,0 +1,20 @@
+import { useGlobalContext } from "../context/cardDeckContext";
+import { useGameContext } from "../context/gameLogicContext";
+import { useEffect } from "react";
+import ShuffleCards from "./ShuffleCards";
+const useRefresh = () => {
+  const { setShuffledCards, cardsFrontIcons, back } = useGlobalContext();
+  const { setChoiceOne, setChoiceTwo } = useGameContext();
+  useEffect(() => {
+    setShuffledCards(
+      (preValue) =>
+        (preValue = [...cardsFrontIcons, ...cardsFrontIcons]
+          .sort(() => Math.random() - 0.5)
+          .map((card, index) => ({ ...card, id: index + 1, ...back })))
+    );
+    setChoiceOne(null);
+    setChoiceTwo(null);
+  }, []);
+};
+
+export default useRefresh;
