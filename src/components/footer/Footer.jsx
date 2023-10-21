@@ -3,13 +3,25 @@ import styles from './Footer.module.css'
 
 const Footer = () => {
   return (
-    <ul>
+    <ul className={styles.navigation}>
       <li>
-        <NavLink to="/"
-        >Home</NavLink>
+        <NavLink to="/"   
+          
+          className={({ isActive }) =>
+            styles.navLinks +
+            (isActive ? ` ${styles.activated}` : styles.navLinks)
+          }>Home</NavLink>
       </li>
       <li>
-        <NavLink to="about">About</NavLink>
+        <NavLink
+          to="about"
+          className={({ isActive }) =>
+            styles.navLinks +
+            (isActive ? ` ${styles.activated}` : styles.navLinks)
+          }
+        >
+          About
+        </NavLink>
       </li>
     </ul>
   );
