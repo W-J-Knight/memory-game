@@ -81,7 +81,7 @@ body{
 main {
   color: darkgrey;
   background-color: rgb(52, 52, 70);
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   padding: .5rem;

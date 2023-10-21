@@ -3,8 +3,6 @@
     position: relative;
     width: 15%;
     display: flex;
-    /* justify-content: center;
-    flex-direction: column; */
     margin-bottom: .25rem;
 }
 .front, .back{
@@ -13,28 +11,22 @@
     justify-content: center;
 }
 .card .front{
-    /* border: red solid 2px; */
     transform: rotateY(90deg);
     transition: all ease-in 0.2s;
     position: absolute;
 }
 .flipped .front{
-    /* border: rgb(40, 7, 132) solid 2px; */
     transform: rotateY(0deg);
     transition-delay: 0s;
     background: #000;
 }
 .card .back {
-    /* border: red solid 2px; */
-    /* transform: rotateY(90deg); */
-    /* position: absolute;
-     */
+
      transition: all ease-in 0.2s;
      transition-delay: 0.2s;
 }
 
 .flipped .back {
-    /* border: rgb(40, 7, 132) solid 2px; */
     transform: rotateY(90deg);
     transition-delay: 0s;
 }
